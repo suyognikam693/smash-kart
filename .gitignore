@@ -39,3 +39,13 @@ dist/
 # Specific to your project structure
 backend/uploads/*
 !backend/uploads/.gitkeep
+
+# OS generated files
+Thumbs.db
+db.json
+
+# If you use Vite/React for frontend (common for 'dist' usage)
+.eslintcache
+
+# Prevents tracking of the Docker-related temp files if you use them
+.dockerignore
