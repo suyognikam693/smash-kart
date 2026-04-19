@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary-container": "#3b1382",
+                    "surface": "#eff8ff",
+                    "secondary": "#705900",
+                    "on-primary": "#ecf3ff",
+                    "on-primary-fixed": "#000000",
+                    "on-primary-container": "#00253f",
+                    "secondary-dim": "#624d00",
+                    "on-secondary-container": "#584500",
+                    "surface-dim": "#c2d7e7",
+                    "on-background": "#233038",
+                    "error-container": "#fb5151",
+                    "inverse-on-surface": "#919fa9",
+                    "tertiary": "#6747b0",
+                    "outline": "#6b7982",
+                    "on-error": "#ffefee",
+                    "primary-container": "#2ea7ff",
+                    "surface-container-highest": "#cbe0ee",
+                    "on-surface": "#233038",
+                    "surface-container-lowest": "#ffffff",
+                    "inverse-primary": "#00a1fe",
+                    "primary-dim": "#005386",
+                    "surface-tint": "#005f99",
+                    "tertiary-fixed-dim": "#b191fe",
+                    "surface-container": "#d9ebf7",
+                    "primary-fixed": "#2ea7ff",
+                    "secondary-fixed": "#fecb00",
+                    "primary-fixed-dim": "#0099f2",
+                    "tertiary-dim": "#5b3aa3",
+                    "error-dim": "#9f0519",
+                    "outline-variant": "#a1afb9",
+                    "on-tertiary-fixed-variant": "#44208b",
+                    "secondary-fixed-dim": "#eebe00",
+                    "on-tertiary": "#f8f0ff",
+                    "on-secondary-fixed-variant": "#634e00",
+                    "background": "#eff8ff",
+                    "on-error-container": "#570008",
+                    "surface-variant": "#cbe0ee",
+                    "inverse-surface": "#031017",
+                    "on-surface-variant": "#505d66",
+                    "surface-container-low": "#e3f3ff",
+                    "tertiary-container": "#bda1ff",
+                    "on-secondary": "#fff1d5",
+                    "surface-container-high": "#d2e5f3",
+                    "primary": "#005f99",
+                    "surface-bright": "#eff8ff",
+                    "on-primary-fixed-variant": "#002e4e",
+                    "on-tertiary-fixed": "#1f0052",
+                    "on-secondary-fixed": "#413200",
+                    "tertiary-fixed": "#bda1ff",
+                    "secondary-container": "#fecb00",
+                    "error": "#b31b25"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Plus Jakarta Sans"],
+                    "body": ["Plus Jakarta Sans"],
+                    "label": ["Plus Jakarta Sans"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface selection:bg-primary-container selection:text-white pb-32">
+<!-- TopAppBar -->
+<header class="bg-[#eff8ff] dark:bg-slate-950 docked full-width top-0 sticky z-50 shadow-[0_20px_40px_rgba(0,95,153,0.08)]">
+<div class="flex justify-between items-center w-full px-6 py-4 max-w-7xl mx-auto">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[#005f99] dark:text-[#2ea7ff] text-3xl" data-icon="sports_esports">sports_esports</span>
+<h1 class="text-[#005f99] dark:text-[#2ea7ff] font-['Plus_Jakarta_Sans'] font-extrabold tracking-tight text-3xl uppercase italic tracking-tighter">SMASH EVENTS</h1>
+</div>
+<nav class="hidden md:flex gap-8 items-center font-['Plus_Jakarta_Sans'] font-bold text-sm uppercase tracking-widest">
+<a class="text-[#233038] dark:text-slate-400 hover:scale-105 hover:text-[#2ea7ff] transition-transform duration-300" href="#">Arena</a>
+<a class="text-[#005f99] border-b-4 border-[#ffb400] hover:scale-105 hover:text-[#2ea7ff] transition-transform duration-300" href="#">Tourneys</a>
+<a class="text-[#233038] dark:text-slate-400 hover:scale-105 hover:text-[#2ea7ff] transition-transform duration-300" href="#">Hall of Fame</a>
+</nav>
+<div class="flex items-center">
+<span class="material-symbols-outlined text-[#005f99] dark:text-[#2ea7ff] text-3xl scale-102 active:scale-95 transition-all cubic-bezier(0.34,1.56,0.64,1)" data-icon="account_circle">account_circle</span>
+</div>
+</div>
+</header>
+<main class="max-w-7xl mx-auto px-6 py-12 space-y-24">
+<!-- Hero Section: The Kinetic Pill Canvas -->
+<section class="relative w-full h-[618px] min-h-[500px] rounded-xl overflow-hidden shadow-[0_20px_40px_rgba(0,95,153,0.12)]">
+<img alt="Winner Hero" class="w-full h-full object-cover" data-alt="Intense high-energy eSports professional player celebrating a major victory on stage with cinematic neon blue and orange stage lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwFtIyTBdVapoCd3Tec-TAPLQbBe7ES2qwghZ4W9dnuHoqDx2sK75jfMCW2AUUbct2zUGuT_RwVOnjnqGtN3wZzcuYycPKyfz7yI0sTMEHbHHXm2cjsq-Zs_nYHV2QPehqcNcYXf-kG5iunAtEkHkqH0U4EBWuWFU8rszWLOUCQerU56B5E2rYi8CSswuy5p5dFvBrX_jtuX_ojtAoNthGjOG8E0m_kjk0VtK5TPPBl9hbLPa8EUC9xQ8OvNWqd1MXA9RzCP8TXTJM"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#00253f]/90 via-[#00253f]/20 to-transparent"></div>
+<div class="absolute bottom-12 left-12 right-12 z-10 flex flex-col md:flex-row md:items-end md:justify-between gap-6">
+<div class="space-y-2">
+<span class="bg-secondary-container text-on-secondary-container px-6 py-2 rounded-full text-xs font-black uppercase tracking-[0.2em] shadow-lg">Current Champion</span>
+<h2 class="text-white text-6xl md:text-8xl font-black italic uppercase tracking-tighter leading-none">LEXA_01</h2>
+<p class="text-primary-container text-2xl font-bold tracking-tight">GLOBAL SMASH INVITATIONAL 2024</p>
+</div>
+<button class="bg-primary text-white px-10 py-5 rounded-full font-black uppercase tracking-widest text-sm flex items-center gap-3 hover:scale-105 active:scale-90 transition-all cubic-bezier(0.34,1.56,0.64,1) shadow-xl self-start md:self-end">
+                    Watch Replay
+                    <span class="material-symbols-outlined" data-icon="play_circle">play_circle</span>
+</button>
+</div>
+</section>
+<!-- Highlights Title Section -->
+<div class="text-center space-y-4">
+<p class="text-primary font-black uppercase tracking-[0.3em] text-sm">Tournament Rewind</p>
+<h3 class="text-5xl md:text-7xl font-black italic tracking-tighter text-on-background">EPIC MOMENTS</h3>
+<div class="w-24 h-2 bg-secondary-container mx-auto rounded-full"></div>
+</div>
+<!-- Alternating Blog Layout: Image Left / Text Right -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+<div class="relative group h-[500px]">
+<div class="absolute -inset-4 bg-primary-container/10 rounded-xl -rotate-2 transition-transform group-hover:rotate-0"></div>
+<img alt="Arcade gear" class="relative w-full h-full object-cover rounded-xl shadow-2xl transition-transform group-hover:scale-[1.02]" data-alt="Vibrant close-up of a high-end gaming mechanical keyboard with glowing RGB backlit keys in a dark arcade setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCVAgd_zu0yddxZrV68W7NPS1691yo9XdPYOMWThlenHgubP9MCMPxWabPiWmyMnwDTuO03uIDaQR98_KucUdkZdBGusEHF1nn17V-U09jkUla4d0bsAk2yET06xikFsORsBaEP09qm6G2U3nZ7hv6yfFqAraXOJvWeVn6X3vrC_cPxRtnZ2bFtrWZyZJT-M4VC_ysZC_eCU8ct5mYJGgrs1uYG5J0eFkD_M-KOPO_qhrUAJydO2yaNzR6g998mhpkgIqJYnyCq2oji"/>
+</div>
+<div class="space-y-8 pl-0 lg:pl-12">
+<div class="space-y-4">
+<span class="text-primary-container font-black text-6xl opacity-20 italic">01</span>
+<h4 class="text-4xl font-black uppercase italic tracking-tighter">The Final Combo</h4>
+<p class="text-on-surface-variant text-lg leading-relaxed">
+                        In a nail-biting finish during the semi-finals, Lexa executed a flawless 42-hit combo that left the crowd speechless. The precision of the movement showcased why professional gaming has reached an editorial level of performance art.
+                    </p>
+</div>
+<div class="flex gap-4">
+<div class="bg-surface-container-high px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider text-primary">#SKILL</div>
+<div class="bg-surface-container-high px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider text-primary">#COMBOKING</div>
+</div>
+</div>
+</div>
+<!-- Alternating Blog Layout: Text Left / Image Right -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+<div class="order-2 lg:order-1 space-y-8 pr-0 lg:pr-12">
+<div class="space-y-4">
+<span class="text-primary-container font-black text-6xl opacity-20 italic">02</span>
+<h4 class="text-4xl font-black uppercase italic tracking-tighter">Neon Nightfall Arena</h4>
+<p class="text-on-surface-variant text-lg leading-relaxed">
+                        The venue transformed into a "Polished Playground" where tactical lights pulsed in sync with every elimination. It wasn't just a tournament; it was a physical manifestation of digital energy, creating a high-end tactile experience for both players and spectators.
+                    </p>
+</div>
+<div class="flex gap-4">
+<div class="bg-surface-container-high px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider text-primary">#ATMOSPHERE</div>
+<div class="bg-surface-container-high px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider text-primary">#ESPORTSLIFW</div>
+</div>
+</div>
+<div class="relative group order-1 lg:order-2 h-[500px]">
+<div class="absolute -inset-4 bg-secondary-container/10 rounded-xl rotate-2 transition-transform group-hover:rotate-0"></div>
+<img alt="Arena view" class="relative w-full h-full object-cover rounded-xl shadow-2xl transition-transform group-hover:scale-[1.02]" data-alt="Wide shot of a massive esports arena with huge LED screens, crowd silhouettes, and blue laser lights cutting through the atmosphere" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBIgYtwbaGa5JnyQlkHQsXvkxRhexstIgUKAEayMRjfCh2jjmJpROeZlaiWXmAQGPw0ev9AqpBbqqLeZoZtXxjFvVZAkf5q9-4wWTcaFaJ5fjd7L7RKaShPQN4mOMBPSiFBsFMQ3_iR41ZEXdGtkmbfs81dDdUoZ29Ih0MwvePR5RJvR6mwsij3D5bPYfEJT1vOh6ev5XqGsH-O8lczHgRgKDM0StgO6SUDxeQRirp-iGqua6NSikC6ko6dJzTBy2843S4dQ92IpjDW"/>
+</div>
+</div>
+<!-- Bento Grid for Quick Stats/Highlights -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="bg-surface-container-low p-10 rounded-xl space-y-4 flex flex-col justify-center items-center text-center shadow-sm">
+<span class="material-symbols-outlined text-5xl text-primary" data-icon="groups">groups</span>
+<h5 class="text-4xl font-black italic tracking-tighter">1.2M+</h5>
+<p class="text-sm font-bold uppercase tracking-widest text-on-surface-variant">Live Viewers</p>
+</div>
+<div class="bg-secondary-container p-10 rounded-xl space-y-4 flex flex-col justify-center items-center text-center shadow-xl md:scale-110">
+<span class="material-symbols-outlined text-5xl text-on-secondary-container" data-icon="payments">payments</span>
+<h5 class="text-4xl font-black italic tracking-tighter text-on-secondary-container">$500,000</h5>
+<p class="text-sm font-bold uppercase tracking-widest text-on-secondary-container">Total Prize Pool</p>
+</div>
+<div class="bg-surface-container-low p-10 rounded-xl space-y-4 flex flex-col justify-center items-center text-center shadow-sm">
+<span class="material-symbols-outlined text-5xl text-primary" data-icon="timer">timer</span>
+<h5 class="text-4xl font-black italic tracking-tighter">72H</h5>
+<p class="text-sm font-bold uppercase tracking-widest text-on-surface-variant">Non-stop Action</p>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-3 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl rounded-t-[3rem] shadow-[0_-10px_40px_rgba(0,95,153,0.12)] md:hidden">
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 p-2 active:scale-90 transition-all cubic-bezier(0.34,1.56,0.64,1) hover:bg-[#eff8ff] dark:hover:bg-slate-800 rounded-full" href="#">
+<span class="material-symbols-outlined" data-icon="home_app_logo">home_app_logo</span>
+<span class="font-['Plus_Jakarta_Sans'] font-bold text-[10px] uppercase tracking-widest mt-1">Arena</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-[#2ea7ff] text-white rounded-full px-5 py-2 scale-110 shadow-lg active:scale-90 transition-all cubic-bezier(0.34,1.56,0.64,1)" href="#">
+<span class="material-symbols-outlined" data-icon="emoji_events" style="font-variation-settings: 'FILL' 1;">emoji_events</span>
+<span class="font-['Plus_Jakarta_Sans'] font-bold text-[10px] uppercase tracking-widest mt-1">Tourneys</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 p-2 active:scale-90 transition-all cubic-bezier(0.34,1.56,0.64,1) hover:bg-[#eff8ff] dark:hover:bg-slate-800 rounded-full" href="#">
+<span class="material-symbols-outlined" data-icon="military_tech">military_tech</span>
+<span class="font-['Plus_Jakarta_Sans'] font-bold text-[10px] uppercase tracking-widest mt-1">Hall of Fame</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 p-2 active:scale-90 transition-all cubic-bezier(0.34,1.56,0.64,1) hover:bg-[#eff8ff] dark:hover:bg-slate-800 rounded-full" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-['Plus_Jakarta_Sans'] font-bold text-[10px] uppercase tracking-widest mt-1">Profile</span>
+</a>
+</nav>
+</body></html>

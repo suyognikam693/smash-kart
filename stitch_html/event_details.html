@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-container": "#3b1382",
+                        "surface": "#eff8ff",
+                        "secondary": "#705900",
+                        "on-primary": "#ecf3ff",
+                        "on-primary-fixed": "#000000",
+                        "on-primary-container": "#00253f",
+                        "secondary-dim": "#624d00",
+                        "on-secondary-container": "#584500",
+                        "surface-dim": "#c2d7e7",
+                        "on-background": "#233038",
+                        "error-container": "#fb5151",
+                        "inverse-on-surface": "#919fa9",
+                        "tertiary": "#6747b0",
+                        "outline": "#6b7982",
+                        "on-error": "#ffefee",
+                        "primary-container": "#2ea7ff",
+                        "surface-container-highest": "#cbe0ee",
+                        "on-surface": "#233038",
+                        "surface-container-lowest": "#ffffff",
+                        "inverse-primary": "#00a1fe",
+                        "primary-dim": "#005386",
+                        "surface-tint": "#005f99",
+                        "tertiary-fixed-dim": "#b191fe",
+                        "surface-container": "#d9ebf7",
+                        "primary-fixed": "#2ea7ff",
+                        "secondary-fixed": "#fecb00",
+                        "primary-fixed-dim": "#0099f2",
+                        "tertiary-dim": "#5b3aa3",
+                        "error-dim": "#9f0519",
+                        "outline-variant": "#a1afb9",
+                        "on-tertiary-fixed-variant": "#44208b",
+                        "secondary-fixed-dim": "#eebe00",
+                        "on-tertiary": "#f8f0ff",
+                        "on-secondary-fixed-variant": "#634e00",
+                        "background": "#eff8ff",
+                        "on-error-container": "#570008",
+                        "surface-variant": "#cbe0ee",
+                        "inverse-surface": "#031017",
+                        "on-surface-variant": "#505d66",
+                        "surface-container-low": "#e3f3ff",
+                        "tertiary-container": "#bda1ff",
+                        "on-secondary": "#fff1d5",
+                        "surface-container-high": "#d2e5f3",
+                        "primary": "#005f99",
+                        "surface-bright": "#eff8ff",
+                        "on-primary-fixed-variant": "#002e4e",
+                        "on-tertiary-fixed": "#1f0052",
+                        "on-secondary-fixed": "#413200",
+                        "tertiary-fixed": "#bda1ff",
+                        "secondary-container": "#fecb00",
+                        "error": "#b31b25"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Plus Jakarta Sans"],
+                        "body": ["Plus Jakarta Sans"],
+                        "label": ["Plus Jakarta Sans"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .text-shadow-premium {
+            text-shadow: 0 4px 12px rgba(0, 95, 153, 0.15);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary-container selection:text-white">
+<!-- TopAppBar Navigation Shell -->
+<header class="bg-[#eff8ff] dark:bg-slate-950 docked full-width top-0 sticky z-50 shadow-[0_20px_40px_rgba(0,95,153,0.08)]">
+<div class="flex justify-between items-center w-full px-6 py-4 max-w-7xl mx-auto">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[#005f99] dark:text-[#2ea7ff] scale-125" data-icon="sports_esports">sports_esports</span>
+<h1 class="font-['Plus_Jakarta_Sans'] font-extrabold tracking-tight text-3xl uppercase text-[#005f99] dark:text-[#2ea7ff]">
+                    SMASH EVENTS
+                </h1>
+</div>
+<nav class="hidden md:flex gap-8">
+<a class="font-bold text-sm uppercase tracking-widest text-[#005f99] border-b-4 border-[#ffb400] hover:scale-105 transition-transform duration-300" href="#">Arena</a>
+<a class="font-bold text-sm uppercase tracking-widest text-[#233038] dark:text-slate-400 hover:scale-105 hover:text-[#2ea7ff] transition-transform duration-300" href="#">Tourneys</a>
+<a class="font-bold text-sm uppercase tracking-widest text-[#233038] dark:text-slate-400 hover:scale-105 hover:text-[#2ea7ff] transition-transform duration-300" href="#">Hall of Fame</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-[#005f99] scale-110 active:scale-95 transition-all" data-icon="account_circle">account_circle</button>
+</div>
+</div>
+</header>
+<main class="max-w-7xl mx-auto px-6 py-8 md:py-16 space-y-12">
+<!-- Hero Section: Event Overview -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+<!-- Asymmetrical Image Card -->
+<div class="lg:col-span-7 relative group">
+<div class="absolute -inset-4 bg-primary-container/20 rounded-xl blur-2xl group-hover:bg-primary-container/30 transition-all"></div>
+<div class="relative bg-surface-container-lowest rounded-xl overflow-hidden aspect-[16/10] shadow-[0_20px_40px_rgba(0,95,153,0.08)]">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="dynamic close up of a colorful e-sports arena with glowing neon lights and high performance gaming gear in sharp focus" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLZVElNgR6jbneUXWIjK7e1GQLov-hUoRyTncoTKj0MSv8-Ef8umRtFbeNytrK4bg1vrshCbdR663VgydN5XmoNOhEX_W9Kg4Cs6w5usuFx1kSxgDTaAHFXeBWqtXea3DLSYL58vekMjOTmephufCxNf0s6DeH36Z-O29inAMq6knU6qlRmtmc5OKlJPYOPE4Lt1C9HKqGDWH9npDjzVnmSZwFTMRmBWZ_OpJghwMCzRLsNhW6QvByLgkaQNM4n2xfCmT9nPoGn5hr"/>
+<div class="absolute top-6 left-6 flex gap-2">
+<span class="bg-secondary-container text-on-secondary-container px-4 py-1 rounded-full text-xs font-black uppercase tracking-widest shadow-lg">LIVE IN 2 DAYS</span>
+</div>
+</div>
+</div>
+<!-- Details Panel -->
+<div class="lg:col-span-5 space-y-8 flex flex-col justify-center h-full">
+<div class="space-y-4">
+<span class="text-primary font-bold uppercase tracking-[0.2em] text-xs">Major Series / Season 4</span>
+<h2 class="text-5xl md:text-6xl font-black italic tracking-tighter text-on-surface leading-none text-shadow-premium">ULTRASMASH CHAMPIONSHIP</h2>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-surface-container-low p-5 rounded-lg space-y-1 border-l-4 border-primary">
+<p class="text-on-surface-variant text-[10px] uppercase font-bold tracking-widest">Venue</p>
+<p class="font-black text-primary uppercase text-sm">Nexus Digital Arena</p>
+</div>
+<div class="bg-surface-container-low p-5 rounded-lg space-y-1 border-l-4 border-secondary-container">
+<p class="text-on-surface-variant text-[10px] uppercase font-bold tracking-widest">Time</p>
+<p class="font-black text-on-surface uppercase text-sm">18:00 UTC</p>
+</div>
+<div class="bg-surface-container-low p-5 rounded-lg space-y-1 border-l-4 border-tertiary-container">
+<p class="text-on-surface-variant text-[10px] uppercase font-bold tracking-widest">Duration</p>
+<p class="font-black text-on-surface uppercase text-sm">4 Hours Approx.</p>
+</div>
+<div class="bg-surface-container-low p-5 rounded-lg space-y-1 border-l-4 border-error-container">
+<p class="text-on-surface-variant text-[10px] uppercase font-bold tracking-widest">Registered</p>
+<p class="font-black text-on-surface uppercase text-sm">124 / 150 Players</p>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="flex-1 bg-secondary-container text-on-secondary-container py-5 rounded-full font-black text-lg uppercase tracking-tighter shadow-lg hover:scale-[1.03] active:scale-95 transition-all cubic-bezier(0.34,1.56,0.64,1)">
+                        Register Now
+                    </button>
+<button class="p-5 bg-surface-container-highest text-on-surface rounded-full hover:scale-110 active:scale-90 transition-all">
+<span class="material-symbols-outlined" data-icon="share">share</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Bento Grid: Rules & Content -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Rules Section -->
+<div class="md:col-span-2 bg-surface-container-lowest p-10 rounded-xl shadow-[0_20px_40px_rgba(0,95,153,0.05)] border-t-8 border-primary">
+<div class="flex items-center gap-4 mb-8">
+<div class="bg-primary/10 p-3 rounded-full">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="gavel">gavel</span>
+</div>
+<h3 class="text-2xl font-black italic uppercase tracking-tight">Tournament Rules</h3>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+<ul class="space-y-6">
+<li class="flex gap-4">
+<span class="material-symbols-outlined text-secondary-container" data-icon="check_circle" data-weight="fill">check_circle</span>
+<div>
+<h4 class="font-bold text-on-surface uppercase text-xs tracking-widest mb-1">Single Elimination</h4>
+<p class="text-on-surface-variant text-sm leading-relaxed">Lose a set and you're out. Best of 3 until Top 8.</p>
+</div>
+</li>
+<li class="flex gap-4">
+<span class="material-symbols-outlined text-secondary-container" data-icon="check_circle" data-weight="fill">check_circle</span>
+<div>
+<h4 class="font-bold text-on-surface uppercase text-xs tracking-widest mb-1">Standard Map Pool</h4>
+<p class="text-on-surface-variant text-sm leading-relaxed">Only authorized competitive maps allowed for rankings.</p>
+</div>
+</li>
+</ul>
+<ul class="space-y-6">
+<li class="flex gap-4">
+<span class="material-symbols-outlined text-secondary-container" data-icon="check_circle" data-weight="fill">check_circle</span>
+<div>
+<h4 class="font-bold text-on-surface uppercase text-xs tracking-widest mb-1">Check-in Required</h4>
+<p class="text-on-surface-variant text-sm leading-relaxed">Verify your presence 30 minutes before the first whistle.</p>
+</div>
+</li>
+<li class="flex gap-4">
+<span class="material-symbols-outlined text-secondary-container" data-icon="check_circle" data-weight="fill">check_circle</span>
+<div>
+<h4 class="font-bold text-on-surface uppercase text-xs tracking-widest mb-1">Fair Play Protocol</h4>
+<p class="text-on-surface-variant text-sm leading-relaxed">Zero tolerance for toxic behavior or software assistance.</p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<!-- Host/Sponsor Card -->
+<div class="bg-primary text-white p-10 rounded-xl shadow-xl flex flex-col justify-between group overflow-hidden relative">
+<div class="absolute -right-10 -bottom-10 opacity-10 scale-150 rotate-12 group-hover:rotate-0 transition-transform duration-700">
+<span class="material-symbols-outlined text-[200px]" data-icon="trophy">trophy</span>
+</div>
+<div>
+<h3 class="text-xs font-bold uppercase tracking-[0.3em] opacity-80 mb-2">Grand Prize</h3>
+<p class="text-5xl font-black italic leading-none mb-6">$5,000</p>
+<div class="space-y-2">
+<div class="h-1 bg-white/20 w-full rounded-full"></div>
+<p class="text-sm font-medium opacity-90">+ 5,000 Smash Points</p>
+<p class="text-sm font-medium opacity-90">+ Legendary Skin Box</p>
+</div>
+</div>
+<div class="mt-8 flex items-center gap-3">
+<img class="w-12 h-12 rounded-full border-2 border-white/50" data-alt="professional portrait of a tournament organizer in a sleek branded hoodie" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-ombdZq--5GfzqnCttO3Oe6ufVi8kXCfj5JgEIVamnQTo7PII3S-NdFKbxqlHqfpIFfD8eXpXtA53j0jSqMh-xHJq4tzWCt_xCqPQfaby_LAn3jBA2mPUnBEx7qDJwpPdYuLcMltsiLvE4oR3lLJ723WL8dFNU1T2Ydp_S5GRv33eSHyYgHzBT135YRsZAzod5T2cRTXA9PE2uzSqmituiUtHxOjajdOxqHH3AHi148nkaJv9yqM3VLEn2aUCCOV2vZBinEfxSIR3"/>
+<div>
+<p class="text-[10px] uppercase font-bold tracking-widest opacity-70">Hosted By</p>
+<p class="text-sm font-black">Admin_Victor</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Upcoming Events -->
+<section class="pt-8">
+<div class="flex justify-between items-end mb-8">
+<div class="space-y-1">
+<h3 class="text-3xl font-black italic uppercase tracking-tighter">More Action</h3>
+<p class="text-on-surface-variant text-sm font-medium">Don't miss these upcoming brawls</p>
+</div>
+<button class="bg-surface-container-high px-6 py-2 rounded-full font-bold text-xs uppercase tracking-widest hover:bg-primary-container hover:text-white transition-colors">View All</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- Mini Card 1 -->
+<div class="group flex bg-surface-container-lowest rounded-lg overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300">
+<div class="w-1/3 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="abstract bright red and orange gaming background with sharp geometric shapes and energetic motion blur" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQzuExU2PTUOsvUm70DKSQP4D2uGU9_2BkWSkWiMCGlBBnrA22fj_XmqXsrUv5McsqRjLlGOq9UjX5Lmwe7Ep7jXP87EACdzGZWjg5Uf70T-A1kKpapKoek-vz53l_H60_GCKVc-vruy_-aymJFQxRJgw1Yh0MaoWKfoJ9BiEMPbGSiysQBnKOWkfsdXRmlWTBm4-8s_g1a3agZcClH-8Caqg-n8uswuR7DmG4I_pAKoimG3_7dIxpTdNBuY8SOhRKC91nEyWbbkAz"/>
+</div>
+<div class="w-2/3 p-6 flex flex-col justify-between">
+<div>
+<span class="text-[10px] font-black text-tertiary uppercase tracking-widest">Rookie League</span>
+<h4 class="text-xl font-black italic uppercase tracking-tight mt-1 mb-2">Sprint Showdown</h4>
+<p class="text-xs text-on-surface-variant line-clamp-1">Perfect for entry-level smashers looking to climb rankings.</p>
+</div>
+<div class="flex items-center justify-between mt-4">
+<div class="flex items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined text-sm" data-icon="schedule">schedule</span>
+<span class="text-[10px] font-bold uppercase">Sep 12</span>
+</div>
+<span class="material-symbols-outlined text-primary group-hover:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+</div>
+</div>
+</div>
+<!-- Mini Card 2 -->
+<div class="group flex bg-surface-container-lowest rounded-lg overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300">
+<div class="w-1/3 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="ethereal cosmic blue and purple nebula style background representing digital fantasy worlds and high stakes competition" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAygHsj6w0Xfp1C-AcUljR8zHWELAQK1vdMKa5q9435yxPFuxtttSbNXgORRhka2i4Pfa9HmmVXw5m1CtCULLXzEiWSvaKsKAtik8RfwuctvISezMwSPKQoSM4N37MuwDLJ-sVgd2eBjZbP-Z116jMBw6FmXen6xDD7mOgWDBPES_SXSJeAuNBixwaqNAi74j0vfhnxa4_0B9QeNVuMCXND7ntKI47WZbyNJO5lsuiAMRnKJzD2fvGb55TlZkB6omidLHqyZLcplso3"/>
+</div>
+<div class="w-2/3 p-6 flex flex-col justify-between">
+<div>
+<span class="text-[10px] font-black text-error uppercase tracking-widest">Elite Only</span>
+<h4 class="text-xl font-black italic uppercase tracking-tight mt-1 mb-2">Midnight Blitz</h4>
+<p class="text-xs text-on-surface-variant line-clamp-1">High-speed matches under the neon lights of Neo-Tokyo.</p>
+</div>
+<div class="flex items-center justify-between mt-4">
+<div class="flex items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined text-sm" data-icon="schedule">schedule</span>
+<span class="text-[10px] font-bold uppercase">Sep 15</span>
+</div>
+<span class="material-symbols-outlined text-primary group-hover:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar Platform Shell -->
+<footer class="md:hidden">
+<div class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-3 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl shadow-[0_-10px_40px_rgba(0,95,153,0.12)] rounded-t-[3rem]">
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 p-2 hover:bg-[#eff8ff] dark:hover:bg-slate-800 rounded-full active:scale-90 transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="home_app_logo">home_app_logo</span>
+<span class="font-['Plus_Jakarta_Sans'] font-bold text-[10px] uppercase tracking-widest mt-1">Arena</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-[#2ea7ff] text-white rounded-full px-5 py-2 scale-110 shadow-lg active:scale-90 transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="emoji_events">emoji_events</span>
+<span class="font-['Plus_Jakarta_Sans'] font-bold text-[10px] uppercase tracking-widest mt-1">Tourneys</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 p-2 hover:bg-[#eff8ff] dark:hover:bg-slate-800 rounded-full active:scale-90 transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="military_tech">military_tech</span>
+<span class="font-['Plus_Jakarta_Sans'] font-bold text-[10px] uppercase tracking-widest mt-1">Hame of Fame</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 p-2 hover:bg-[#eff8ff] dark:hover:bg-slate-800 rounded-full active:scale-90 transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-['Plus_Jakarta_Sans'] font-bold text-[10px] uppercase tracking-widest mt-1">Profile</span>
+</a>
+</div>
+</footer>
+<!-- Bottom Spacer for Mobile Nav -->
+<div class="h-24 md:hidden"></div>
+</body></html>

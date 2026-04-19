@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Smash Kart Events</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary-container": "#3b1382",
+                    "surface": "#eff8ff",
+                    "secondary": "#705900",
+                    "on-primary": "#ecf3ff",
+                    "on-primary-fixed": "#000000",
+                    "on-primary-container": "#00253f",
+                    "secondary-dim": "#624d00",
+                    "on-secondary-container": "#584500",
+                    "surface-dim": "#c2d7e7",
+                    "on-background": "#233038",
+                    "error-container": "#fb5151",
+                    "inverse-on-surface": "#919fa9",
+                    "tertiary": "#6747b0",
+                    "outline": "#6b7982",
+                    "on-error": "#ffefee",
+                    "primary-container": "#2ea7ff",
+                    "surface-container-highest": "#cbe0ee",
+                    "on-surface": "#233038",
+                    "surface-container-lowest": "#ffffff",
+                    "inverse-primary": "#00a1fe",
+                    "primary-dim": "#005386",
+                    "surface-tint": "#005f99",
+                    "tertiary-fixed-dim": "#b191fe",
+                    "surface-container": "#d9ebf7",
+                    "primary-fixed": "#2ea7ff",
+                    "secondary-fixed": "#fecb00",
+                    "primary-fixed-dim": "#0099f2",
+                    "tertiary-dim": "#5b3aa3",
+                    "error-dim": "#9f0519",
+                    "outline-variant": "#a1afb9",
+                    "on-tertiary-fixed-variant": "#44208b",
+                    "secondary-fixed-dim": "#eebe00",
+                    "on-tertiary": "#f8f0ff",
+                    "on-secondary-fixed-variant": "#634e00",
+                    "background": "#eff8ff",
+                    "on-error-container": "#570008",
+                    "surface-variant": "#cbe0ee",
+                    "inverse-surface": "#031017",
+                    "on-surface-variant": "#505d66",
+                    "surface-container-low": "#e3f3ff",
+                    "tertiary-container": "#bda1ff",
+                    "on-secondary": "#fff1d5",
+                    "surface-container-high": "#d2e5f3",
+                    "primary": "#005f99",
+                    "surface-bright": "#eff8ff",
+                    "on-primary-fixed-variant": "#002e4e",
+                    "on-tertiary-fixed": "#1f0052",
+                    "on-secondary-fixed": "#413200",
+                    "tertiary-fixed": "#bda1ff",
+                    "secondary-container": "#fecb00",
+                    "error": "#b31b25"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Plus Jakarta Sans"],
+                    "body": ["Plus Jakarta Sans"],
+                    "label": ["Plus Jakarta Sans"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .kinetic-pill { transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1); }
+        .kinetic-pill:active { transform: scale(0.95) translateY(2px); }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-surface text-on-surface mb-24 md:mb-0">
+<!-- TopAppBar -->
+<nav class="bg-[#eff8ff] dark:bg-slate-950 docked full-width top-0 sticky z-50 shadow-[0_20px_40px_rgba(0,95,153,0.08)]">
+<div class="flex justify-between items-center w-full px-6 py-4 max-w-7xl mx-auto">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[#005f99] dark:text-[#2ea7ff] text-3xl" data-icon="sports_esports">sports_esports</span>
+<h1 class="font-['Plus_Jakarta_Sans'] font-extrabold tracking-tight text-3xl uppercase text-[#005f99] dark:text-[#2ea7ff]">SMASH EVENTS</h1>
+</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-['Plus_Jakarta_Sans'] font-bold text-sm uppercase tracking-widest text-[#005f99] border-b-4 border-[#ffb400] transition-transform duration-300 hover:scale-105" href="#">Arena</a>
+<a class="font-['Plus_Jakarta_Sans'] font-bold text-sm uppercase tracking-widest text-[#233038] dark:text-slate-400 transition-transform duration-300 hover:scale-105 hover:text-[#2ea7ff]" href="#">Tourneys</a>
+<a class="font-['Plus_Jakarta_Sans'] font-bold text-sm uppercase tracking-widest text-[#233038] dark:text-slate-400 transition-transform duration-300 hover:scale-105 hover:text-[#2ea7ff]" href="#">Hall of Fame</a>
+<span class="material-symbols-outlined text-[#005f99] dark:text-[#2ea7ff] text-3xl cursor-pointer" data-icon="account_circle">account_circle</span>
+</div>
+<div class="md:hidden">
+<span class="material-symbols-outlined text-[#005f99] dark:text-[#2ea7ff] text-3xl" data-icon="account_circle">account_circle</span>
+</div>
+</div>
+</nav>
+<main class="max-w-7xl mx-auto px-4 sm:px-6 py-8 space-y-12">
+<!-- HERO SECTION: Latest Champion -->
+<section class="relative overflow-hidden rounded-xl bg-primary-container p-1 shadow-lg">
+<div class="relative flex flex-col md:flex-row items-center bg-gradient-to-br from-primary-fixed to-primary-dim rounded-[2.8rem] min-h-[450px] overflow-hidden">
+<!-- Background Decorative Pattern -->
+<div class="absolute inset-0 opacity-10 pointer-events-none">
+<svg height="100%" width="100%" xmlns="http://www.w3.org/2000/svg">
+<defs><pattern height="40" id="dots" patternunits="userSpaceOnUse" width="40"><circle cx="20" cy="20" fill="white" r="2"></circle></pattern></defs>
+<rect fill="url(#dots)" height="100%" width="100%"></rect>
+</svg>
+</div>
+<div class="relative z-10 w-full md:w-1/2 p-8 md:p-16 space-y-4">
+<div class="inline-flex items-center gap-2 bg-secondary-container px-4 py-1.5 rounded-full shadow-md">
+<span class="material-symbols-outlined text-on-secondary-container text-lg" data-icon="stars" style="font-variation-settings: 'FILL' 1;">stars</span>
+<span class="text-[10px] font-black uppercase tracking-[0.2em] text-on-secondary-container">Latest Champion</span>
+</div>
+<h2 class="text-white text-5xl md:text-7xl font-extrabold tracking-tighter leading-none italic">VIKTOR "THE BOLT"</h2>
+<p class="text-on-primary text-xl font-medium tracking-tight opacity-90">Winner of the Smash Kart Grand Prix • Season 4</p>
+<div class="pt-6">
+<button class="kinetic-pill bg-secondary-container text-on-secondary-container px-8 py-4 rounded-full font-black uppercase tracking-widest text-sm shadow-xl flex items-center gap-3 hover:scale-105 active:scale-95">
+                            View Hall of Fame
+                            <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+<div class="relative w-full md:w-1/2 h-[300px] md:h-[450px] flex items-center justify-center p-8">
+<div class="relative w-full h-full transform rotate-3 scale-110">
+<img alt="Champion" class="w-full h-full object-cover rounded-lg shadow-2xl border-4 border-secondary-container" data-alt="Intense close up of a professional gamer with colorful neon lighting, wearing headphones and focused expression in a dark futuristic arena" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4pd_vysn9hy6D0cHp858p1yDD-P5FZxd1AT5BPF3XQruBuIMfgHuHx6Da9C3J0-fvvdvPkxnMwcm3zM3cZkDA7biPvTPIUHQYSsBh8s9T7V5PwnVtxqLxKeeqR_9q31yxIg5P54Hm7SlwMRqUH7IUCuulsTNLVy96WMX8WKUjjIJ002Z4kSETxs3d5KA6z9JXo1mcZbMwDETyzj9Q_GTMVg5eKuTRHZhQF-TPfeNtEE9ZTw8JuqMCcBqZeLR1oiQz1kTpMl9Mwmcb"/>
+</div>
+<!-- Accent elements -->
+<div class="absolute top-10 right-10 bg-white/20 backdrop-blur-md p-4 rounded-full">
+<span class="material-symbols-outlined text-white text-4xl" data-icon="emoji_events" style="font-variation-settings: 'FILL' 1;">emoji_events</span>
+</div>
+</div>
+</div>
+</section>
+<!-- UPCOMING EVENTS -->
+<section class="space-y-8">
+<div class="flex justify-between items-end">
+<div class="space-y-1">
+<span class="text-[10px] font-black uppercase tracking-[0.3em] text-primary">Live Schedule</span>
+<h3 class="text-4xl font-extrabold tracking-tight text-on-background">UPCOMING EVENTS</h3>
+</div>
+<button class="text-primary font-bold text-sm uppercase tracking-widest flex items-center gap-2 hover:underline">
+                    View All <span class="material-symbols-outlined" data-icon="chevron_right">chevron_right</span>
+</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Event Card 1: Registered State -->
+<div class="bg-surface-container-lowest p-6 rounded-lg shadow-[0_20px_40px_rgba(0,95,153,0.06)] space-y-6 flex flex-col border border-outline-variant/10 hover:scale-102 transition-transform duration-300">
+<div class="flex justify-between items-start">
+<div class="bg-surface-container-low px-4 py-2 rounded-2xl text-center">
+<div class="text-xs font-black uppercase text-primary">Apr</div>
+<div class="text-2xl font-black text-on-background">04</div>
+</div>
+<div class="bg-secondary/10 text-secondary font-black text-[10px] px-3 py-1 rounded-full uppercase tracking-tighter">
+                            Already In
+                        </div>
+</div>
+<div class="space-y-2">
+<h4 class="text-2xl font-extrabold tracking-tight text-on-background leading-none">Midnight Dash Royale</h4>
+<div class="flex flex-wrap gap-3">
+<div class="flex items-center gap-1 text-on-surface-variant text-xs font-bold">
+<span class="material-symbols-outlined text-sm" data-icon="schedule">schedule</span> 8 PM
+                            </div>
+<div class="flex items-center gap-1 text-on-surface-variant text-xs font-bold">
+<span class="material-symbols-outlined text-sm" data-icon="payments">payments</span> ₹20 Entry
+                            </div>
+</div>
+</div>
+<div class="mt-auto flex-col gap-3">
+<button class="kinetic-pill w-full bg-secondary-container text-on-secondary-container py-4 rounded-full font-black uppercase tracking-widest text-xs flex items-center justify-center gap-2 shadow-md">
+<span class="material-symbols-outlined text-sm" data-icon="login">login</span>
+                            Join Room
+                        </button>
+<button class="kinetic-pill w-full border-2 border-primary text-primary py-3 rounded-full font-black uppercase tracking-widest text-[10px] flex items-center justify-center gap-2 hover:bg-primary/5">
+<span class="material-symbols-outlined text-sm" data-icon="person">person</span>
+    View Players List
+</button></div>
+</div>
+<!-- Event Card 2: Open State (Featured) -->
+<div class="bg-surface-container-lowest p-6 rounded-lg shadow-[0_20px_40px_rgba(0,95,153,0.06)] space-y-6 flex flex-col border-2 border-primary/20 scale-105 z-10 hover:scale-[1.07] transition-transform duration-300">
+<div class="flex justify-between items-start">
+<div class="bg-primary text-white px-4 py-2 rounded-2xl text-center shadow-lg">
+<div class="text-xs font-black uppercase">Apr</div>
+<div class="text-2xl font-black">06</div>
+</div>
+<div class="bg-error-container text-white font-black text-[10px] px-3 py-1 rounded-full uppercase tracking-tighter shadow-sm">
+                            High Stakes
+                        </div>
+</div>
+<div class="space-y-2">
+<h4 class="text-2xl font-extrabold tracking-tight text-on-background leading-none">Champion's Arena Duel</h4>
+<div class="flex flex-wrap gap-3">
+<div class="flex items-center gap-1 text-on-surface-variant text-xs font-bold">
+<span class="material-symbols-outlined text-sm" data-icon="schedule">schedule</span> 9 PM
+                            </div>
+<div class="flex items-center gap-1 text-on-surface-variant text-xs font-bold">
+<span class="material-symbols-outlined text-sm" data-icon="payments">payments</span> ₹50 Entry
+                            </div>
+</div>
+</div>
+<div class="mt-auto flex-col gap-3">
+<button class="kinetic-pill w-full bg-primary text-white py-4 rounded-full font-black uppercase tracking-widest text-xs flex items-center justify-center gap-2 shadow-xl">
+                            Register Now
+                        </button>
+<button class="kinetic-pill w-full border-2 border-primary text-primary py-3 rounded-full font-black uppercase tracking-widest text-[10px] flex items-center justify-center gap-2 hover:bg-primary/5">
+<span class="material-symbols-outlined text-sm" data-icon="person">person</span>
+    View Players List
+</button></div>
+</div>
+<!-- Event Card 3: Open State -->
+<div class="bg-surface-container-lowest p-6 rounded-lg shadow-[0_20px_40px_rgba(0,95,153,0.06)] space-y-6 flex flex-col border border-outline-variant/10 hover:scale-102 transition-transform duration-300">
+<div class="flex justify-between items-start">
+<div class="bg-surface-container-low px-4 py-2 rounded-2xl text-center">
+<div class="text-xs font-black uppercase text-primary">Apr</div>
+<div class="text-2xl font-black text-on-background">08</div>
+</div>
+</div>
+<div class="space-y-2">
+<h4 class="text-2xl font-extrabold tracking-tight text-on-background leading-none">Rookie Rumble Cup</h4>
+<div class="flex flex-wrap gap-3">
+<div class="flex items-center gap-1 text-on-surface-variant text-xs font-bold">
+<span class="material-symbols-outlined text-sm" data-icon="schedule">schedule</span> 6 PM
+                            </div>
+<div class="flex items-center gap-1 text-on-surface-variant text-xs font-bold">
+<span class="material-symbols-outlined text-sm" data-icon="payments">payments</span> ₹10 Entry
+                            </div>
+</div>
+</div>
+<div class="mt-auto flex-col gap-3">
+<button class="kinetic-pill w-full bg-primary text-white py-4 rounded-full font-black uppercase tracking-widest text-xs flex items-center justify-center gap-2 shadow-xl">
+                            Register Now
+                        </button>
+<button class="kinetic-pill w-full border-2 border-primary text-primary py-3 rounded-full font-black uppercase tracking-widest text-[10px] flex items-center justify-center gap-2 hover:bg-primary/5">
+<span class="material-symbols-outlined text-sm" data-icon="person">person</span>
+    View Players List
+</button></div>
+</div>
+</div>
+</section>
+<!-- RECENT HIGHLIGHTS -->
+<section class="space-y-8 pb-12">
+<div class="space-y-1">
+<span class="text-[10px] font-black uppercase tracking-[0.3em] text-primary">Rewatch the Glory</span>
+<h3 class="text-4xl font-extrabold tracking-tight text-on-background">RECENT HIGHLIGHTS</h3>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Highlight Card 1 -->
+<div class="group relative bg-surface-container-lowest rounded-lg overflow-hidden shadow-lg border border-outline-variant/10 hover:shadow-2xl transition-all duration-300">
+<div class="aspect-video relative overflow-hidden">
+<img alt="Highlights" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Action packed cinematic shot of racing karts drifting on a colorful neon-lit digital track with motion blur and sparks" src="https://lh3.googleusercontent.com/aida-public/AB6AXuASwFhY6yWjFdp2EwZYK-6cCWY_bBxbZehSVNj3y65vVOpcyQMT1djbwYrckRlkQpys4Yh8-_0qMjV5NpfCXUyJ4FtPyyIOvUWU4Ov_eoe0_lSyLPn1IOwLCsk9W2eHD0VCiU9lBTXUSUkZxSRhImW7xQyQpFnQDzXnoFzhaSLM3zecrcb3HENB-cYF8BUGf4ChmqNd1sYT6ktVyX0jG6A6YXVc1QatCNmN1Pc-XzOtm-JGbaawCE7vFaqV-Uv8IUoQ_EcvvV9mDpd4"/>
+<div class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-white text-6xl" data-icon="play_circle" style="font-variation-settings: 'FILL' 1;">play_circle</span>
+</div>
+</div>
+<div class="p-5 space-y-3">
+<div class="text-[10px] font-bold text-primary uppercase tracking-widest">Mar 28, 2024</div>
+<h5 class="text-lg font-extrabold text-on-background leading-tight">Nitro City Finals Highlights</h5>
+<button class="kinetic-pill w-full border-2 border-primary text-primary py-3 rounded-full font-black uppercase tracking-widest text-[10px] hover:bg-primary hover:text-white">
+                            Watch Highlights
+                        </button>
+</div>
+</div>
+<!-- Highlight Card 2 -->
+<div class="group relative bg-surface-container-lowest rounded-lg overflow-hidden shadow-lg border border-outline-variant/10 hover:shadow-2xl transition-all duration-300">
+<div class="aspect-video relative overflow-hidden">
+<img alt="Highlights" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Colorful abstract gaming setup with glowing RGB lights and multiple screens showing fast paced racing game action" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAAhBmyo01MOeBK7rqxVFzFZcxF1O-nhvRkQ1nKeFrdy1919scn2ebHzVYMBF35O4yCv9y1yKzcfv6mZ_UeA7Ux5JrlwJzQz0P1yB5T7a2w6q_ipPQX3TREuB5ngUY8ouyRTlvXAsuMw2-b0_sI8c3lfDDNeyLgF_5FL55StGlV7crLvzLLszZ7ZTZ3oI_uhD-kRTcAstSxiN3jG2kGZjNxqHnYH1l0IhnWfFjDc6crU5wkEhOCvp0_clt4BK743s-eO5lpH9hg51SV"/>
+<div class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-white text-6xl" data-icon="play_circle" style="font-variation-settings: 'FILL' 1;">play_circle</span>
+</div>
+</div>
+<div class="p-5 space-y-3">
+<div class="text-[10px] font-bold text-primary uppercase tracking-widest">Mar 25, 2024</div>
+<h5 class="text-lg font-extrabold text-on-background leading-tight">Underground Drift Masters</h5>
+<button class="kinetic-pill w-full border-2 border-primary text-primary py-3 rounded-full font-black uppercase tracking-widest text-[10px] hover:bg-primary hover:text-white">
+                            Watch Highlights
+                        </button>
+</div>
+</div>
+<!-- Highlight Card 3 -->
+<div class="group relative bg-surface-container-lowest rounded-lg overflow-hidden shadow-lg border border-outline-variant/10 hover:shadow-2xl transition-all duration-300">
+<div class="aspect-video relative overflow-hidden">
+<img alt="Highlights" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Dramatic esports arena view with large screens and a silhouette of a player holding a trophy under bright spotlight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuByusDlY35wL4AvhcI_kUWQgrBcTmAsdQ8jacZigB-M4Jj_fPIFIoe6CjBMa2wtvSq-xviZxPc1fNKO9XXuBpn9oizRL9Cg8R2SVpchzn7znbIirTxes03eXd3hZBGPR81M1_vPvAIJTqMLdQKUAnp6YMBrUJjsA65b-PA8bf6b6EWKlreXgLnTaem-I97WO28UgxbBSSs9Apo75S4KS-IHV2nijJiusuSzrfzrrrpYxTcDcCh2QF9OOi1XxK1AeodDx0-A099qLojx"/>
+<div class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-white text-6xl" data-icon="play_circle" style="font-variation-settings: 'FILL' 1;">play_circle</span>
+</div>
+</div>
+<div class="p-5 space-y-3">
+<div class="text-[10px] font-bold text-primary uppercase tracking-widest">Mar 20, 2024</div>
+<h5 class="text-lg font-extrabold text-on-background leading-tight">Pro League Season Finale</h5>
+<button class="kinetic-pill w-full border-2 border-primary text-primary py-3 rounded-full font-black uppercase tracking-widest text-[10px] hover:bg-primary hover:text-white">
+                            Watch Highlights
+                        </button>
+</div>
+</div>
+<!-- Highlight Card 4 -->
+<div class="group relative bg-surface-container-lowest rounded-lg overflow-hidden shadow-lg border border-outline-variant/10 hover:shadow-2xl transition-all duration-300">
+<div class="aspect-video relative overflow-hidden">
+<img alt="Highlights" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Detailed close up of a retro arcade joystick and buttons glowing in blue and pink neon light with soft focus background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMIwh9nfYcyfwJ0RLavrHOL2nshEwivdnRhEoC6XjeWsijTod3Sh0fufHg8Y7Qi33L5iPqIUCUSRaYH2Yy-GIIrglaOxYQ1IIXiT8HkPBHE94LI4gvxrnhPDL1TcPhWnJEJnhtzQNyd3BweicJEttVr6OTRo1hAMjUHHb-0nP_l0Hokm-3L88rLQ2pKd4hMUDVDiH-9YAqx171gaLjNi8gm_1f--fuC8vOqflBoYtK_F73z6VOKl8DW9xoCtm7uqJ40aXNc2MslXxp"/>
+<div class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-white text-6xl" data-icon="play_circle" style="font-variation-settings: 'FILL' 1;">play_circle</span>
+</div>
+</div>
+<div class="p-5 space-y-3">
+<div class="text-[10px] font-bold text-primary uppercase tracking-widest">Mar 15, 2024</div>
+<h5 class="text-lg font-extrabold text-on-background leading-tight">Retro Smash Classic Event</h5>
+<button class="kinetic-pill w-full border-2 border-primary text-primary py-3 rounded-full font-black uppercase tracking-widest text-[10px] hover:bg-primary hover:text-white">
+                            Watch Highlights
+                        </button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-3 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl md:hidden shadow-[0_-10px_40px_rgba(0,95,153,0.12)] rounded-t-[3rem]">
+<a class="flex flex-col items-center justify-center bg-[#2ea7ff] text-white rounded-full px-5 py-2 scale-110 shadow-lg active:scale-90 transition-all cubic-bezier(0.34,1.56,0.64,1)" href="#">
+<span class="material-symbols-outlined" data-icon="home_app_logo">home_app_logo</span>
+<span class="font-['Plus_Jakarta_Sans'] font-bold text-[10px] uppercase tracking-widest mt-0.5">Arena</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 p-2 hover:bg-[#eff8ff] dark:hover:bg-slate-800 rounded-full active:scale-90 transition-all cubic-bezier(0.34,1.56,0.64,1)" href="#">
+<span class="material-symbols-outlined" data-icon="emoji_events">emoji_events</span>
+<span class="font-['Plus_Jakarta_Sans'] font-bold text-[10px] uppercase tracking-widest mt-0.5">Tourneys</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 p-2 hover:bg-[#eff8ff] dark:hover:bg-slate-800 rounded-full active:scale-90 transition-all cubic-bezier(0.34,1.56,0.64,1)" href="#">
+<span class="material-symbols-outlined" data-icon="military_tech">military_tech</span>
+<span class="font-['Plus_Jakarta_Sans'] font-bold text-[10px] uppercase tracking-widest mt-0.5">Hall of Fame</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 p-2 hover:bg-[#eff8ff] dark:hover:bg-slate-800 rounded-full active:scale-90 transition-all cubic-bezier(0.34,1.56,0.64,1)" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-['Plus_Jakarta_Sans'] font-bold text-[10px] uppercase tracking-widest mt-0.5">Profile</span>
+</a>
+</nav>
+</body></html>

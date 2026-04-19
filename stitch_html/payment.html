@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Payment - SMASH EVENTS</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-tertiary-container": "#3b1382",
+                      "surface": "#eff8ff",
+                      "secondary": "#705900",
+                      "on-primary": "#ecf3ff",
+                      "on-primary-fixed": "#000000",
+                      "on-primary-container": "#00253f",
+                      "secondary-dim": "#624d00",
+                      "on-secondary-container": "#584500",
+                      "surface-dim": "#c2d7e7",
+                      "on-background": "#233038",
+                      "error-container": "#fb5151",
+                      "inverse-on-surface": "#919fa9",
+                      "tertiary": "#6747b0",
+                      "outline": "#6b7982",
+                      "on-error": "#ffefee",
+                      "primary-container": "#2ea7ff",
+                      "surface-container-highest": "#cbe0ee",
+                      "on-surface": "#233038",
+                      "surface-container-lowest": "#ffffff",
+                      "inverse-primary": "#00a1fe",
+                      "primary-dim": "#005386",
+                      "surface-tint": "#005f99",
+                      "tertiary-fixed-dim": "#b191fe",
+                      "surface-container": "#d9ebf7",
+                      "primary-fixed": "#2ea7ff",
+                      "secondary-fixed": "#fecb00",
+                      "primary-fixed-dim": "#0099f2",
+                      "tertiary-dim": "#5b3aa3",
+                      "error-dim": "#9f0519",
+                      "outline-variant": "#a1afb9",
+                      "on-tertiary-fixed-variant": "#44208b",
+                      "secondary-fixed-dim": "#eebe00",
+                      "on-tertiary": "#f8f0ff",
+                      "on-secondary-fixed-variant": "#634e00",
+                      "background": "#eff8ff",
+                      "on-error-container": "#570008",
+                      "surface-variant": "#cbe0ee",
+                      "inverse-surface": "#031017",
+                      "on-surface-variant": "#505d66",
+                      "surface-container-low": "#e3f3ff",
+                      "tertiary-container": "#bda1ff",
+                      "on-secondary": "#fff1d5",
+                      "surface-container-high": "#d2e5f3",
+                      "primary": "#005f99",
+                      "surface-bright": "#eff8ff",
+                      "on-primary-fixed-variant": "#002e4e",
+                      "on-tertiary-fixed": "#1f0052",
+                      "on-secondary-fixed": "#413200",
+                      "tertiary-fixed": "#bda1ff",
+                      "secondary-container": "#fecb00",
+                      "error": "#b31b25"
+              },
+              "borderRadius": {
+                      "DEFAULT": "1rem",
+                      "lg": "2rem",
+                      "xl": "3rem",
+                      "full": "9999px"
+              },
+              "fontFamily": {
+                      "headline": ["Plus Jakarta Sans"],
+                      "body": ["Plus Jakarta Sans"],
+                      "label": ["Plus Jakarta Sans"]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 48;
+        }
+        .kinetic-pill {
+            transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+        .kinetic-pill:active {
+            transform: scale(0.95) translateY(2px);
+        }
+        .kinetic-pill:hover {
+            transform: scale(1.05);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface min-h-screen pb-24">
+<!-- TopAppBar -->
+<nav class="docked full-width top-0 sticky z-50 bg-[#eff8ff] dark:bg-slate-950 shadow-[0_20px_40px_rgba(0,95,153,0.08)]">
+<div class="flex justify-between items-center w-full px-6 py-4 max-w-7xl mx-auto">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[#005f99] dark:text-[#2ea7ff] text-3xl">sports_esports</span>
+<h1 class="font-['Plus_Jakarta_Sans'] font-extrabold tracking-tight text-3xl uppercase text-[#005f99] dark:text-[#2ea7ff]">SMASH EVENTS</h1>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-[#233038] dark:text-slate-400 text-3xl cursor-pointer hover:scale-105 hover:text-[#2ea7ff] transition-transform duration-300">account_circle</span>
+</div>
+</div>
+</nav>
+<!-- Main Content -->
+<main class="max-w-4xl mx-auto px-6 py-12">
+<!-- Header Section with Asymmetry -->
+<div class="mb-12 space-y-4">
+<div class="inline-block bg-secondary-container text-on-secondary-container px-4 py-1 rounded-full font-label text-[10px] uppercase tracking-widest font-bold">
+                Final Step
+            </div>
+<h2 class="text-[3.5rem] leading-none font-extrabold tracking-tight text-primary uppercase italic">
+                Secure Your Slot
+            </h2>
+<p class="text-on-surface-variant max-w-md text-lg">
+                Complete your transaction to enter the arena. Your entry will be verified by the tournament admins within 10 minutes.
+            </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
+<!-- Left Column: QR and Instructions -->
+<div class="md:col-span-5 space-y-8">
+<!-- QR Code Card -->
+<div class="bg-surface-container-lowest rounded-xl p-8 shadow-[0_20px_40px_rgba(0,95,153,0.08)] flex flex-col items-center justify-center transform hover:scale-[1.02] transition-transform duration-500">
+<div class="relative w-full aspect-square bg-surface-container-low rounded-lg flex items-center justify-center p-6 mb-4">
+<img alt="QR Code" class="w-full h-full object-contain" data-alt="A clean high-contrast black and white QR code displayed on a modern matte white digital payment interface background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMF0Tm_uLAhtv-9EOkdERd_j7ZSw2MIQO-59j5wSrya-MchIOQeEPeWknnwtIv0Vy_fU5-Y2TjEfU7ldwu11Rdr-kspgrZEuWc5PXmRsAtwwGg0nSworJU7iOgAJiS7NoyNarqX5CVpMT6i2P4mGdz6Ah55o33eh7YyAK5Sb7g-IOfl8azGV1PrEfAi3iRXyxojZFyJ8jxeFiyLx9TvhAGs_gV9Aw0pa-mgV3Fnj4oPq72vC48UM4_CtId0oiq96m-ZQgF7AhcBm9p"/>
+<div class="absolute -top-4 -right-4 bg-primary text-white p-4 rounded-full shadow-lg">
+<span class="material-symbols-outlined text-2xl">qr_code_scanner</span>
+</div>
+</div>
+<p class="text-primary font-bold text-center uppercase tracking-tighter text-xl italic">Scan &amp; Pay</p>
+<p class="text-on-surface-variant text-sm font-medium">Tournament Fee: $25.00</p>
+</div>
+<!-- Instructions Bento Piece -->
+<div class="bg-surface-container-low rounded-lg p-6 space-y-4">
+<h3 class="font-bold uppercase tracking-widest text-xs text-primary">Instructions</h3>
+<ul class="space-y-4">
+<li class="flex items-start gap-4">
+<div class="bg-primary-container text-on-primary-container w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 text-xs font-bold">1</div>
+<p class="text-sm font-medium text-on-surface">Open your payment app → History</p>
+</li>
+<li class="flex items-start gap-4">
+<div class="bg-primary-container text-on-primary-container w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 text-xs font-bold">2</div>
+<p class="text-sm font-medium text-on-surface">Select payment → Copy Transaction ID</p>
+</li>
+<li class="flex items-start gap-4">
+<div class="bg-primary-container text-on-primary-container w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 text-xs font-bold">3</div>
+<p class="text-sm font-medium text-on-surface">Paste the ID and upload a screenshot below</p>
+</li>
+</ul>
+</div>
+</div>
+<!-- Right Column: Form Fields -->
+<div class="md:col-span-7 bg-surface-container-lowest rounded-xl p-8 md:p-10 shadow-[0_20px_40px_rgba(0,95,153,0.08)] space-y-10">
+<div class="space-y-6">
+<!-- Transaction ID Field -->
+<div class="space-y-2">
+<label class="text-primary font-bold text-sm uppercase tracking-widest px-1">Transaction ID</label>
+<div class="relative group">
+<input class="w-full bg-surface-container-high border-none rounded-lg px-6 py-5 focus:ring-4 focus:ring-primary-container text-on-surface font-semibold placeholder:text-outline-variant transition-all outline-none" placeholder="TXN-9900-SMASH-..." type="text"/>
+<span class="material-symbols-outlined absolute right-6 top-1/2 -translate-y-1/2 text-outline-variant group-focus-within:text-primary transition-colors">fingerprint</span>
+</div>
+</div>
+<!-- Upload Button UI -->
+<div class="space-y-2">
+<label class="text-primary font-bold text-sm uppercase tracking-widest px-1">Proof of Payment</label>
+<div class="relative group cursor-pointer">
+<div class="w-full bg-surface-container-high border-2 border-dashed border-outline-variant/30 rounded-lg p-10 flex flex-col items-center justify-center gap-4 group-hover:bg-primary-container/10 transition-all">
+<div class="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-md group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary text-3xl">cloud_upload</span>
+</div>
+<div class="text-center">
+<p class="text-on-surface font-bold">Upload Screenshot</p>
+<p class="text-outline-variant text-xs mt-1 uppercase tracking-tighter">PNG, JPG up to 10MB</p>
+</div>
+<input class="absolute inset-0 opacity-0 cursor-pointer" type="file"/>
+</div>
+</div>
+</div>
+</div>
+<!-- Complete Registration Button -->
+<button class="kinetic-pill w-full bg-secondary-container text-on-secondary-container py-6 rounded-full font-black text-xl uppercase tracking-tighter shadow-xl flex items-center justify-center gap-3">
+                    Complete Registration
+                    <span class="material-symbols-outlined font-bold">rocket_launch</span>
+</button>
+<div class="flex items-center justify-center gap-2 opacity-50">
+<span class="material-symbols-outlined text-sm">verified_user</span>
+<span class="text-[10px] uppercase font-bold tracking-widest">End-to-End Encrypted Secure Gateway</span>
+</div>
+</div>
+</div>
+<!-- Support Section -->
+<div class="mt-16 bg-primary rounded-lg p-8 flex flex-col md:flex-row items-center justify-between gap-6 shadow-2xl overflow-hidden relative">
+<div class="relative z-10">
+<h4 class="text-white font-extrabold text-2xl uppercase italic">Stuck in the lobby?</h4>
+<p class="text-on-primary opacity-80 font-medium">Our tournament organizers are available 24/7 for help.</p>
+</div>
+<button class="kinetic-pill relative z-10 bg-white text-primary px-8 py-4 rounded-full font-bold uppercase tracking-widest text-sm flex items-center gap-2">
+<span class="material-symbols-outlined">support_agent</span>
+                Contact Support
+            </button>
+<!-- Decorative circle -->
+<div class="absolute -right-12 -bottom-12 w-48 h-48 bg-primary-container rounded-full opacity-20"></div>
+</div>
+</main>
+<!-- Note: BottomNavBar is suppressed due to Transactional page intent rule -->
+</body></html>
