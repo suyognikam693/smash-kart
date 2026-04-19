@@ -6,6 +6,7 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
+.env
 
 node_modules
 dist
@@ -22,3 +23,19 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Ignore node_modules in subdirectories (like your backend folder)
+**/node_modules/
+
+# Ignore environment files in subdirectories
+**/.env
+**/.env.*
+.env.local
+
+# Build outputs
+dist/
+**/dist/
+
+# Specific to your project structure
+backend/uploads/*
+!backend/uploads/.gitkeep
