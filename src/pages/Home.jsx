@@ -5,12 +5,14 @@ import EventCard from '../components/EventCard';
 import HighlightCard from '../components/HighlightCard';
 import { highlights } from '../data/mockData';
 
+const BASE_URL = import.meta.env.VITE_API_URL || '';
+
 export default function Home() {
   const [events, setEvents] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch('/api/events')
+    fetch(`${BASE_URL}/api/events`)
       .then(res => res.json())
       .then(data => {
         if(data.success) setEvents(data.events);

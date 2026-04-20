@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 
+const BASE_URL = import.meta.env.VITE_API_URL || '';
+
 export default function PlayersList() {
   const location = useLocation();
   const event_id = location.state?.event_id || 'evt-2';
@@ -10,7 +12,7 @@ export default function PlayersList() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch(`/api/events/${event_id}/players`)
+    fetch(`${BASE_URL}/api/events/${event_id}/players`)
       .then(res => res.json())
       .then(data => {
         if(data.success) setPlayers(data.players);

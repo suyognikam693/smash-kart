@@ -13,7 +13,7 @@ const app = express();
 // Rate limiter setup: maximum of 100 requests per minute
 const limiter = rateLimit({
   windowMs: 1 * 60 * 1000, // 1 minute
-  max: 100, // limit each IP to 100 requests per windowMs
+  max: 50, // limit each IP to 100 requests per windowMs
   message: 'Too many requests from this IP, please try again after a minute'
 });
 

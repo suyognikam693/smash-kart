@@ -3,6 +3,8 @@ import { useNavigate, useLocation } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import Button from '../components/Button';
 
+const BASE_URL = import.meta.env.VITE_API_URL || '';
+
 export default function Payment() {
   const navigate = useNavigate();
   const location = useLocation();
@@ -25,7 +27,7 @@ export default function Payment() {
     if(file) formData.append('screenshot', file);
 
     try {
-      const res = await fetch('/api/register', {
+      const res = await fetch(`${BASE_URL}/api/register`, {
         method: 'POST',
         body: formData,
       });

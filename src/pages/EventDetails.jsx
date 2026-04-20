@@ -3,6 +3,8 @@ import { useParams, useNavigate } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import Button from '../components/Button';
 
+const BASE_URL = import.meta.env.VITE_API_URL || '';
+
 export default function EventDetails() {
   const { id } = useParams();
   const navigate = useNavigate();
@@ -11,14 +13,14 @@ export default function EventDetails() {
   const [players, setPlayers] = useState([]);
 
   useEffect(() => {
-    fetch(`/api/events/${id}`)
+    fetch(`${BASE_URL}/api/events/${id}`)
       .then(res => res.json())
       .then(data => {
         if(data.success) setEvent(data.event);
         setLoading(false);
       });
       
-    fetch(`/api/events/${id}/players`)
+    fetch(`${BASE_URL}/api/events/${id}/players`)
       .then(res => res.json())
       .then(data => {
         if(data.success) setPlayers(data.players || []);
@@ -31,7 +33,7 @@ export default function EventDetails() {
     const mockUserEmail = prompt("Enter your registered email to join:", "player@example.com");
     if (!mockUserEmail) return;
 
-    fetch(`/api/events/${id}/join?email=${encodeURIComponent(mockUserEmail)}`)
+    fetch(`${BASE_URL}/api/events/${id}/join?email=${encodeURIComponent(mockUserEmail)}`)
       .then(res => res.json())
       .then(data => {
         if (data.success) {
