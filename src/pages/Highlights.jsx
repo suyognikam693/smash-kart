@@ -12,7 +12,7 @@ export default function Highlights() {
           <div className="space-y-2">
             <span className="text-primary font-bold uppercase tracking-[0.2em] text-xs">Video Archive</span>
             <h2 className="text-5xl md:text-6xl font-black italic tracking-tighter text-on-surface uppercase">
-              Hall of Fame
+              COMING SOON !!!
             </h2>
             <p className="text-on-surface-variant font-medium">Relive the greatest moments in Smash Kart history.</p>
           </div>
@@ -21,16 +21,16 @@ export default function Highlights() {
             <button className="bg-surface-container-high px-4 py-2 rounded-full font-bold text-xs uppercase tracking-widest hover:bg-surface-variant transition-colors">Season 4</button>
           </div>
         </div>
-
+        {/*
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {highlights.map(hl => (
             <HighlightCard key={hl.id} highlight={hl} />
           ))}
-          {/* Add a few more clones for the layout */}
+          {/* Add a few more clones for the layout *
           {highlights.map(hl => (
             <HighlightCard key={`${hl.id}-clone`} highlight={hl} />
           ))}
-        </div>
+        </div>*/}
       </main>
     </div>
   );

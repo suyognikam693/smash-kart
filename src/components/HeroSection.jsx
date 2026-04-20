@@ -19,17 +19,17 @@ export default function HeroSection() {
             <rect width="100%" height="100%" fill="url(#dots)"></rect>
           </svg>
         </div>
-        
+
         <div className="relative z-10 w-full md:w-1/2 p-8 md:p-16 space-y-4">
           <div className="inline-flex items-center gap-2 bg-secondary-container px-4 py-1.5 rounded-full shadow-md">
             <span className="material-symbols-outlined text-on-secondary-container text-lg" style={{ fontVariationSettings: "'FILL' 1" }}>stars</span>
-            <span className="text-[10px] font-black uppercase tracking-[0.2em] text-on-secondary-container">Latest Champion</span>
+            <span className="text-[10px] font-black uppercase tracking-[0.2em] text-on-secondary-container">GOAT</span>
           </div>
           <h2 className="text-white text-5xl md:text-7xl font-extrabold tracking-tighter leading-none italic">
-            VIKTOR "THE BOLT"
+            Ravikumar "THE BADASS"
           </h2>
           <p className="text-on-primary text-xl font-medium tracking-tight opacity-90">
-            Winner of the Smash Kart Grand Prix • Season 4
+            The Legend that we all admire !!!!!
           </p>
           <div className="pt-6">
             <Button variant="secondary" icon="arrow_forward" className="px-8 py-4 text-sm" onClick={() => navigate('/highlights')}>
@@ -40,18 +40,18 @@ export default function HeroSection() {
 
         <div className="relative w-full md:w-1/2 h-[300px] md:h-[450px] flex items-center justify-center p-8">
           <div className="relative w-full h-full transform rotate-3 scale-110">
-            <img 
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4pd_vysn9hy6D0cHp858p1yDD-P5FZxd1AT5BPF3XQruBuIMfgHuHx6Da9C3J0-fvvdvPkxnMwcm3zM3cZkDA7biPvTPIUHQYSsBh8s9T7V5PwnVtxqLxKeeqR_9q31yxIg5P54Hm7SlwMRqUH7IUCuulsTNLVy96WMX8WKUjjIJ002Z4kSETxs3d5KA6z9JXo1mcZbMwDETyzj9Q_GTMVg5eKuTRHZhQF-TPfeNtEE9ZTw8JuqMCcBqZeLR1oiQz1kTpMl9Mwmcb" 
-              alt="Champion" 
-              className="w-full h-full object-cover rounded-lg shadow-2xl border-4 border-secondary-container" 
+            <img
+              src="https://www.hindustantimes.com/ht-img/img/2025/01/05/550x309/badass_1736055425521_1736055434692.jpg"
+              alt="Champion"
+              className="w-full h-full object-cover rounded-lg shadow-2xl border-4 border-secondary-container"
             />
           </div>
-          {/* Accent elements */}
+          {/* Accent elements 
           <div className="absolute top-10 right-10 bg-white/20 backdrop-blur-md p-4 rounded-full">
             <span className="material-symbols-outlined text-white text-4xl" style={{ fontVariationSettings: "'FILL' 1" }}>
               emoji_events
             </span>
-          </div>
+          </div>*/}
         </div>
       </div>
     </section>
