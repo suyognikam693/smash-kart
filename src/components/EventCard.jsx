@@ -48,7 +48,7 @@ export default function EventCard({ event }) {
             Register Now
           </Button>
         )}
-        <Button variant="outline" icon="person" fullWidth className="py-3 text-[10px]" to="/players">
+        <Button variant="outline" icon="person" fullWidth className="py-3 text-[10px]" onClick={() => navigate('/players', { state: { event_id: event.id } })}>
           View Players List
         </Button>
       </div>
