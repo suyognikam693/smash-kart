@@ -101,10 +101,10 @@ export default function Payment() {
                   />
                 </div>
 
-                {/*<div className="space-y-2">
-                  <label className="text-primary font-bold text-sm uppercase tracking-widest px-1">Proof of Payment</label>
-                  <input type="file" required onChange={e => setFile(e.target.files[0])} className="w-full bg-surface-container-high border-none rounded-lg p-4 font-semibold outline-none" />
-                </div>*/}
+                <div className="space-y-2">
+                  <label className="text-primary font-bold text-sm uppercase tracking-widest px-1">Proof of Payment (Optional)</label>
+                  <input type="file" onChange={e => setFile(e.target.files[0])} className="w-full bg-surface-container-high border-none rounded-lg p-4 font-semibold outline-none" />
+                </div>
               </div>
 
               <div>
