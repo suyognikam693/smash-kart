@@ -8,7 +8,7 @@ const BASE_URL = import.meta.env.VITE_API_URL || '';
 export default function Payment() {
   const navigate = useNavigate();
   const location = useLocation();
-  const { name, uid, email, event_id, fee } = location.state || { name:'', uid:'', email:'', event_id:'evt-2', fee: 50 };
+  const { name, uid, email, event_id, fee } = location.state || { name: '', uid: '', email: '', event_id: 'evt-2', fee: 50 };
 
   const [transactionId, setTransactionId] = useState('');
   const [file, setFile] = useState(null);
@@ -24,7 +24,7 @@ export default function Payment() {
     formData.append('email', email);
     formData.append('event_id', event_id);
     formData.append('transaction_id', transactionId);
-    if(file) formData.append('screenshot', file);
+    if (file) formData.append('screenshot', file);
 
     try {
       const res = await fetch(`${BASE_URL}/api/register`, {
@@ -36,7 +36,7 @@ export default function Payment() {
 
       if (data.success) {
         alert("Registration Successful!");
-        navigate('/');
+        window.location.href = "https://smashkarts.io/link/?mode=67111434&wpns=159212&room=in935428&arena=graveyard";
       } else {
         alert("Error: " + data.message);
       }
@@ -80,7 +80,7 @@ export default function Payment() {
                   <p className="text-sm font-medium text-on-surface">Upload a screenshot below</p>
                 </li>
               </ul>
-              
+
               <div className="mt-8 p-4 bg-surface-container-highest rounded-2xl flex flex-col items-center">
                 <img src="https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=upi://pay?pa=suyognikam903@okaxis&pn=Suyog" alt="UPI QR Code" className="w-64 max-w-full rounded-2xl shadow-xl border-4 border-primary/20 aspect-square object-contain bg-white mb-4" />
                 <p className="text-xs font-bold tracking-widest uppercase text-primary">Scan with UPI App</p>
@@ -93,18 +93,18 @@ export default function Payment() {
             <form onSubmit={handleCompleteRegistration} className="space-y-8">
               <div className="space-y-6">
                 <div className="space-y-2">
-                  <label className="text-primary font-bold text-sm uppercase tracking-widest px-1">Transaction ID</label>
-                  <input 
-                    required value={transactionId} onChange={e=>setTransactionId(e.target.value)}
-                    className="w-full bg-surface-container-high border-none rounded-lg px-6 py-5 font-semibold outline-none" 
-                    placeholder="Enter TXN ID" type="text" 
+                  <label className="text-primary font-bold text-sm uppercase tracking-widest px-1">Fuck this shit</label>
+                  <input
+                    required value={transactionId} onChange={e => setTransactionId(e.target.value)}
+                    className="w-full bg-surface-container-high border-none rounded-lg px-6 py-5 font-semibold outline-none"
+                    placeholder="Just type anything doesnt matter" type="text"
                   />
                 </div>
 
-                <div className="space-y-2">
+                {/*<div className="space-y-2">
                   <label className="text-primary font-bold text-sm uppercase tracking-widest px-1">Proof of Payment</label>
-                  <input type="file" required onChange={e=>setFile(e.target.files[0])} className="w-full bg-surface-container-high border-none rounded-lg p-4 font-semibold outline-none" />
-                </div>
+                  <input type="file" required onChange={e => setFile(e.target.files[0])} className="w-full bg-surface-container-high border-none rounded-lg p-4 font-semibold outline-none" />
+                </div>*/}
               </div>
 
               <div>
