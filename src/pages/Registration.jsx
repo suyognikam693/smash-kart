@@ -13,7 +13,7 @@ export default function Registration() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    navigate('/join-room', { state: { ...formData, event_id, fee } });
+    window.location.href = 'https://smash-kart-lac.vercel.app/join-room';
   };
 
   return (
