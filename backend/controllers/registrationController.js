@@ -4,10 +4,7 @@ exports.registerEvent = async (req, res) => {
   try {
     const { name, email, uid, event_id, transaction_id } = req.body;
 
-    if (!req.file) {
-      return res.status(400).json({ success: false, message: 'Screenshot proof is required' });
-    }
-    const screenshot_url = `/uploads/${req.file.filename}`;
+    const screenshot_url = req.file ? `/uploads/${req.file.filename}` : null;
 
     // 1. Find or create user
     let userResult = await db.query('SELECT id FROM users WHERE email = $1', [email]);
