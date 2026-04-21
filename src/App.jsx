@@ -6,6 +6,7 @@ import Registration from './pages/Registration';
 import Payment from './pages/Payment';
 import PlayersList from './pages/PlayersList';
 import Highlights from './pages/Highlights';
+import JoinRoom from './pages/JoinRoom';
 
 function App() {
   return (
@@ -16,6 +17,8 @@ function App() {
       <Route path="/payment" element={<Payment />} />
       <Route path="/players" element={<PlayersList />} />
       <Route path="/highlights" element={<Highlights />} />
+      {/* Route for joining room (must be exact to access) */}
+      <Route path="/join-room" element={<JoinRoom />} />
       {/* Catch-all to home */}
       <Route path="*" element={<Home />} />
     </Routes>
