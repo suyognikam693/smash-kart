@@ -16,14 +16,14 @@ export default function EventDetails() {
     fetch(`${BASE_URL}/api/events/${id}`)
       .then(res => res.json())
       .then(data => {
-        if(data.success) setEvent(data.event);
+        if (data.success) setEvent(data.event);
         setLoading(false);
       });
-      
+
     fetch(`${BASE_URL}/api/events/${id}/players`)
       .then(res => res.json())
       .then(data => {
-        if(data.success) setPlayers(data.players || []);
+        if (data.success) setPlayers(data.players || []);
       });
   }, [id]);
 
@@ -75,10 +75,10 @@ export default function EventDetails() {
               </h3>
               <ul className="space-y-4">
                 {event.rules?.rules?.map((rule, idx) => (
-                   <li key={idx} className="flex items-start gap-4">
-                     <span className="material-symbols-outlined text-secondary-container mt-1">check_circle</span>
-                     <span className="font-semibold text-on-surface-variant text-lg">{rule}</span>
-                   </li>
+                  <li key={idx} className="flex items-start gap-4">
+                    <span className="material-symbols-outlined text-secondary-container mt-1">check_circle</span>
+                    <span className="font-semibold text-on-surface-variant text-lg">{rule}</span>
+                  </li>
                 ))}
               </ul>
             </div>
@@ -118,7 +118,7 @@ export default function EventDetails() {
                   Join Match Room
                 </Button>
               ) : (
-                <Button variant="primary" fullWidth className="py-5" onClick={() => navigate('/registration', { state: { event_id: event.id, fee: event.fee } })}>
+                <Button variant="primary" fullWidth className="py-5" onClick={() => navigate('/join-room', { state: { event_id: event.id, fee: event.fee } })}>
                   Register Now
                 </Button>
               )}
