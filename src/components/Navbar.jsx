@@ -8,7 +8,7 @@ export default function Navbar() {
         <div className="flex justify-between items-center w-full px-6 py-4 max-w-7xl mx-auto">
           <Link to="/" className="flex items-center gap-3">
             <span className="material-symbols-outlined text-[#005f99] dark:text-[#2ea7ff] text-3xl">sports_esports</span>
-            <h1 className="font-['Plus_Jakarta_Sans'] font-extrabold tracking-tight text-3xl uppercase text-[#005f99] dark:text-[#2ea7ff]">Kart Smasher</h1>
+            <h1 className="font-['Plus_Jakarta_Sans'] font-extrabold tracking-tight text-3xl uppercase text-[#005f99] dark:text-[#2ea7ff]">Kart Smashers</h1>
           </Link>
           <div className="hidden md:flex items-center gap-4">
             <Link className="font-['Plus_Jakarta_Sans'] font-bold text-sm uppercase tracking-widest text-[#005f99] border-b-4 border-[#ffb400] transition-transform duration-300 hover:scale-105" to="/">Arena</Link>
