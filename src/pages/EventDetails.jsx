@@ -118,7 +118,7 @@ export default function EventDetails() {
                   Join Match Room
                 </Button>
               ) : (
-                <Button variant="primary" fullWidth className="py-5" onClick={() => navigate('/join-room', { state: { event_id: event.id, fee: event.fee } })}>
+                <Button variant="primary" fullWidth className="py-5" onClick={() => navigate('/registration', { state: { event_id: event.id, fee: event.fee } })}>
                   Register Now
                 </Button>
               )}

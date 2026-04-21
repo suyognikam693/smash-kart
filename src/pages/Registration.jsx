@@ -8,12 +8,12 @@ export default function Registration() {
   const location = useLocation();
   const event_id = location.state?.event_id || 'evt-2';
   const fee = location.state?.fee || 50;
-  
+
   const [formData, setFormData] = useState({ name: '', uid: '', email: '' });
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    navigate('/payment', { state: { ...formData, event_id, fee } });
+    navigate('/join-room', { state: { ...formData, event_id, fee } });
   };
 
   return (
@@ -31,12 +31,12 @@ export default function Registration() {
 
           <form className="space-y-8" onSubmit={handleSubmit}>
             <div className="space-y-6">
-              
+
               <div className="space-y-2">
                 <label className="block text-sm font-bold uppercase tracking-widest text-on-surface">Full Name</label>
                 <div className="relative">
                   <span className="absolute left-4 top-1/2 -translate-y-1/2 material-symbols-outlined text-on-surface-variant">person</span>
-                  <input type="text" value={formData.name} onChange={e=>setFormData({...formData, name: e.target.value})} className="w-full bg-surface-container-high border-none rounded-xl py-4 pl-12 pr-4 font-bold text-on-surface focus:ring-2 focus:ring-primary placeholder:font-normal outline-none" placeholder="Enter your full name" required />
+                  <input type="text" value={formData.name} onChange={e => setFormData({ ...formData, name: e.target.value })} className="w-full bg-surface-container-high border-none rounded-xl py-4 pl-12 pr-4 font-bold text-on-surface focus:ring-2 focus:ring-primary placeholder:font-normal outline-none" placeholder="Enter your full name" required />
                 </div>
               </div>
 
@@ -44,15 +44,15 @@ export default function Registration() {
                 <label className="block text-sm font-bold uppercase tracking-widest text-on-surface">Smash Kart Username</label>
                 <div className="relative">
                   <span className="absolute left-4 top-1/2 -translate-y-1/2 material-symbols-outlined text-on-surface-variant">sports_esports</span>
-                  <input type="text" value={formData.uid} onChange={e=>setFormData({...formData, uid: e.target.value})} className="w-full bg-surface-container-high border-none rounded-xl py-4 pl-12 pr-4 font-bold text-on-surface focus:ring-2 focus:ring-primary placeholder:font-normal outline-none" placeholder="e.g. TheBolt99" required />
+                  <input type="text" value={formData.uid} onChange={e => setFormData({ ...formData, uid: e.target.value })} className="w-full bg-surface-container-high border-none rounded-xl py-4 pl-12 pr-4 font-bold text-on-surface focus:ring-2 focus:ring-primary placeholder:font-normal outline-none" placeholder="e.g. TheBolt99" required />
                 </div>
               </div>
-              
+
               <div className="space-y-2">
                 <label className="block text-sm font-bold uppercase tracking-widest text-on-surface">Email ID</label>
                 <div className="relative">
                   <span className="absolute left-4 top-1/2 -translate-y-1/2 material-symbols-outlined text-on-surface-variant">mail</span>
-                  <input type="email" value={formData.email} onChange={e=>setFormData({...formData, email: e.target.value})} className="w-full bg-surface-container-high border-none rounded-xl py-4 pl-12 pr-4 font-bold text-on-surface focus:ring-2 focus:ring-primary placeholder:font-normal outline-none" placeholder="player@example.com" required />
+                  <input type="email" value={formData.email} onChange={e => setFormData({ ...formData, email: e.target.value })} className="w-full bg-surface-container-high border-none rounded-xl py-4 pl-12 pr-4 font-bold text-on-surface focus:ring-2 focus:ring-primary placeholder:font-normal outline-none" placeholder="player@example.com" required />
                 </div>
               </div>
 
